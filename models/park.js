@@ -1,7 +1,25 @@
-const Park = function (name, ticket_price){
+const Park = function (name, price){
     this.name = name;
-    this.ticket_price = ticket_price;
-    this.dino_collection = [];
+    this.price = price;
+    this.dinosaurs = [];
 }
-    
+
+// write functions here for the TDD
+
+Park.prototype.addDinosaur = function(dinosaur){
+    this.dinosaurs.push(dinosaur);
+}
+
+Park.prototype.removeDinosaur = function(dinosaur){
+    dinosaurIndex = this.dinosaurs.indexOf(dinosaur);
+    this.dinosaurs.splice(dinosaurIndex, 1);
+}
+
+
+
+
+
+
+
+
 module.exports = Park;
