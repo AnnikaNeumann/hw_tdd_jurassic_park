@@ -15,7 +15,15 @@ Park.prototype.removeDinosaur = function(dinosaur){
     this.dinosaurs.splice(dinosaurIndex, 1);
 }
 
-
+Park.prototype.findAllBySpecies = function(dinosaurSpecies){
+    const found = [];
+    for (let dinosaur of this.dinosaurs){
+        if (dinosaur.species === dinosaurSpecies){
+            found.push(dinosaur);
+        }   
+    }
+    return found
+}
 
 
 
