@@ -25,8 +25,32 @@ Park.prototype.findAllBySpecies = function(dinosaurSpecies){
     return found
 }
 
+Park.prototype.mostVisitors = function(){
+    let mostVisitorsDino = 0;
+    let dinoToReturn;
+    for (const dinosaur of this.dinosaurs)
+    {
+        if(dinosaur.guestsAttractedPerDay > mostVisitorsDino)
+        {
+            mostVisitorsDino = dinosaur.guestsAttractedPerDay
+            dinoToReturn = dinosaur
+        }
+    }
+    return dinoToReturn
+}
 
+Park.prototype.mostVisitors = function(){
+    let total = 0;
+    for (const dinosaur of this.dinosaurs)
+    {
+       total += dinosaur.guestsAttractedPerDay;
+    }
+    return total
+}
 
+// next per year.. just call function above and do some math :)
+
+// next one monies per year, use function above * price per ticket.
 
 
 
